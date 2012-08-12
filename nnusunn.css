@@ -1,0 +1,237 @@
+body,h1,h2,h3,hr,ul,li,ol,img {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+
+body{
+    font-family: Georgia, Times, "Times New Roman";
+    font-size: 12px;
+    color: {color:Text};
+    background-color: {color:Background};
+    background-image: url('{image:Background}');
+}
+
+h1{
+    font-family: "Palatino Linotype", Palatino, Georgia, Times, "Times New Roman";
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+    text-transform: uppercase;          
+}
+
+h2{
+    font-family: "Palatino Linotype", Palatino, Georgia, Times, "Times New Roman";
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic; 
+    text-transform: uppercase;
+}
+
+h3{
+    margin: 0px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+}
+
+a:link {
+    color: {color:Link};
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: {color:Visited Link};
+    text-decoration: underline;
+}
+
+a:hover {
+    color: {color:Hover Link};
+    background-color: {color:Hover Background};
+    text-decoration: none;
+}
+
+a:active {
+    color: {color:Active Link};
+    text-decoration:underline;
+}
+
+.mainArea{
+    margin: auto;
+    margin-top: 100px;
+    width: 960px;
+}
+
+.container{
+    float: left;
+    width: 625px;
+}
+
+.lines{
+    width: 500px;
+    height: 4px;
+    background-image: url('http://static.tumblr.com/c1mtrdf/6y5lezw1o/lines.png');
+    background-repeat: repeat-x;
+    margin-bottom: 10px;
+}
+
+.content{
+    width: 500px;
+    float: left;
+    margin-bottom: 80px;
+    margin-right: 20px;
+}
+
+.info{
+    text-align: right;
+    width: 80px;
+    float: left;
+    margin-bottom: 80px;
+    font-style: italic;
+}   
+
+.infoBar{
+    text-align: right;
+    margin-right: 0;
+    border: 0px;
+    height: 4px;
+    background-color: #000000;
+}
+
+.header{
+    max-width: 260px;
+}
+
+.desc{
+    width: 260px;
+    float: left;
+    padding-left: 40px;
+    margin-left: 30px;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.desc li{
+    list-style: none;
+}
+
+.descP{
+    width: 220px;
+        
+}
+
+.label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+div.photo a:hover{
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+}
+
+.audio{
+    width: 500px;
+    background-color: #000000;
+}
+
+.chat li{
+    list-style: none;
+    margin-bottom: 7px;
+}   
+
+.body li{
+    margin-left: 40px;
+}       
+
+.source{
+    margin-top: 55px;
+    font-size: 12px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.search{
+    margin: 0px;
+    border:1px solid #000000;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 10px;
+    width: 170px;
+}
+
+.submit{
+    margin: 0px;
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 10px;
+    width: 20px;
+}
+
+.tagBox{
+    margin-top: 30px;
+}
+
+.tags{
+    padding: 0px;
+}
+.tags li{
+    font-size: 10px;
+    display: inline;
+    list-style-type: none;
+}
+
+.noEffect a:link{
+    text-decoration: none;
+}
+.noEffect a:visited{
+    text-decoration: none;
+}
+.noEffect a:active{
+    text-decoration: none;
+}
+
+.highres{
+    max-width: 625px;
+}
+
+.postDesc{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.notes{
+    margin-top: 25px;
+}
+
+.notes li{
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+.posted{
+    font-size: 10px;
+}
+
+.footer{
+    clear:both;
+}
+
+.footer a{
+    background-color: #000000;
+    padding: 6px;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+a.fix:hover{
+    background-color: inherit;
+}
+
+{CustomCSS}
+
