@@ -1,710 +1,399 @@
-<html>
-    <head>
-        <title>{Title}</title>
-        <link rel="shortcut icon" href="{Favicon}">
-        <link rel="alternate" type="application/rss+xml" href="{RSS}">
-        {block:Description}
-            <meta name="description" content="{MetaDescription}" />
-        {/block:Description}
-        
-        <!--
-        ======================================================
-        XN THEME || www.justinaguilar.com
-        ======================================================
-        -->
-        
-        <!-- DEFAULT IMAGE -->
-        <meta name="image:Background" content="http://static.tumblr.com/c1mtrdf/gICla5iky/bg.jpg"/>
-        <meta name="image:Header" content=""/>
-        <meta name="color:Background" content="#FFFFFF"/>
-        <meta name="color:Text" content="#131010"/>
-        <meta name="color:Link" content="#000000"/>
-        <meta name="color:Visited Link" content="#000000"/>
-        <meta name="color:Active Link" content="#000000"/>
-        <meta name="color:Hover Link" content="#FFFFFF"/>
-        <meta name="color:Hover Background" content="#000000"/>
-        <meta name="google-site-verification" content="1oMoHk7l-vegmT0WjxEt7_M4N_sKgWOG-PFfF2NaMoQ" />
-        <style type="text/css">
-            body{
-                font-family: Georgia, Times, "Times New Roman";
-                font-size: 12px;
-                color: {color:Text};
-                background-color: {color:Background};
-                background-image: url('{image:Background}');
-            }
-            a:link {
-                color: {color:Link};
-                text-decoration: none;
-                text-decoration: underline;
-            }
-            a:visited{
-                color: {color:Visited Link};
-                text-decoration: underline;
-            }
-            a:hover {
-                color: {color:Hover Link};
-                background-color: {color:Hover Background};
-                text-decoration: none;
-            }
-            a:active {
-                color: {color:Active Link};
-                text-decoration:underline;
-            }
-            {CustomCSS}
-        </style>
-        <link rel="stylesheet" href="http://exp.nnusunn.jp/blog/nnusunn.css" media="screen"/>
-        <script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34005390-1']);
-  _gaq.push(['_trackPageview']);
+    <!-- DEFAULT VARIABLES -->
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-    </head>
-    <body>
+    <meta name="color:Accent" content="#ffff01" />
+    <meta name="color:Background" content="#ffffff" />
+    <meta name="color:Text" content="#000000" />
+    <meta name="color:Link" content="#666666" />
     
-    <div class="mainArea">
+    <meta name="color:Sidebar" content="#e4e4e4" />
+    <meta name="color:SidebarLinks" content="#000000" />
+    <meta name="color:Search" content="#f8f8f8" />
     
-        <div class="container">
-                {block:Posts}
-                    {block:Text}
+    
+    <meta name="if:Show Search" content="1" />
+    <meta name="if:Show Archive Link" content="1" />
+    <meta name="if:Show Tags" content="1" />
+    <meta name="if:Show Album Art on Audio Posts" content="1" />
+    <meta name="text:Google Analytics ID" content=""/>
+    <meta name="text:Disqus Shortname" content=""/>
+
+ 
+
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="shortcut icon" href="{Favicon}">
+    
+    <title>{block:SearchPage}Search results for "{SearchQuery}" - {/block:SearchPage}   {block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+    {block:Description}
+         <meta name="description" content="{MetaDescription}" />
+     {/block:Description}
+    
+    <script type="text/javascript" src="/tweets.js"></script>
+    
+    
+    <link rel="stylesheet" href="http://exp.nnusunn.jp/blog/nnusunn.css" media="screen"/> 
+    <style type="text/css">
+    {CustomCSS}
+    </style>
+ 
+
+<body>
+    <div class="wrap2">
+        <div class="wrap1">
+            <div class="left_wrap">
+                <div class="left_col">
                     
-                    {block:IndexPage}
-                        <div class="content">
-                        <div class="lines"> </div>                      
-                                {block:Title}
-                                    <h2 class="noEffect"><a href="{Permalink}">{Title}</a></h2>
-                                {/block:Title}
+                    <div class="accent"></div>
+                    
+                    <div class="title">
+                        <h1><a href="/">{Title}</a></h1>
+                    </div>        
+                    
+                   {block:SearchPage}
+                        {block:SearchResults}
+                            <div id="searchresults">
+                              {lang:SearchResultCount results for SearchQuery 2}
+                            </div>
+                        {/block:SearchResults}
 
-                                <div class="body">{Body}</div>
-                                    {block:HasTags}
-                                    <div class="tagBox">
-                                        <h3>TAGS:</h3>
-                                        <ul class="tags">
-                                            {block:Tags}
-                                                <li class="noEffect">
-                                                    <a href="{TagURL}">{Tag}</a> /
-                                                </li>
-                                            {/block:Tags}
+                        {block:NoSearchResults}
+                              <div id="searchresults">
+                        
+                                {lang:No search results for SearchQuery 2}                                
+                              </div>
+                        {/block:NoSearchResults}
+                    {/block:SearchPage}
+                    
+                   {block:TagPage}
+                      <div id="tagresults">
+                        Posts tagged "{Tag}"
+                      </div>
+                    {/block:TagPage}
+                    
+                  {block:DayPage} 
+                     <div id="tagresults">
+                        {Month} {DayOfMonth}, {Year}
+                    </div>
+                  {/block:DayPage}
+                    
+                    
+                    
+                    {block:Posts}
+                        <div class="post">
+                            {block:Text}
+                                <div class="regular">
+                                  {block:Title}<h2>{Title}</h2>{/block:Title}
+                                    {Body}
+                                    {block:Date}
+                                        <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                        </div>
+                                    {/block:Date}
+                                </div>
+                            {/block:Text}
+        
+                            {block:Photo}
+                                <div class="photo">     
+                                  {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-500}"/>{LinkCloseTag}
+                                  {block:Caption}{Caption}{/block:Caption}
+                                  {block:Date}
+                                      <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                      </div>
+                                  {/block:Date}
+                                </div>
+                            {/block:Photo}
+        
+                            {block:Quote}
+                                <div class="quote"> 
+                                  <big class="quote">&#147;</big>
+                                  <blockquote>{Quote}</blockquote>
+                                  {block:Source}<cite>{Source}</cite>{/block:Source}
+                                  {block:Date}
+                                      <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                      </div>
+                                  {/block:Date}
+                                </div>
+                            {/block:Quote}
+                        
+                            {block:Link}
+                                  <div class="link"> 
+                                      <a class="go" href="{URL}">{Name}</a>
+                                      {block:Description}{Description}{/block:Description}
+                                  
+                                      {block:Date}
+                                        <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                        </div>
+                                    {/block:Date}
+                                
+                                  </div>
+                            {/block:Link}
+                        
+                           {block:Chat}
+                                  <div class="chat"> 
+                                      {block:Title}<h3>{Title}</h3>{/block:Title}
+                                        <ul class="conv">
+                                          {block:Lines}<li class="{Alt}">{block:Label}<strong>{Label}</strong> {/block:Label}{Line}</li>{/block:Lines}
                                         </ul>
-                                </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">POST</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                        {block:Title}
-                            <h2 class="noEffect"><a href="{Permalink}">{Title}</a></h2>
-                        {/block:Title}
 
-                        <div class="body">{Body}</div>
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                        
-                    {/block:PermalinkPage}
-                        
-                    {/block:Text}
+                                      {block:Date}
+                                        <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                        </div>
+                                    {/block:Date}
 
-                    {block:Photo}
-                    
-                    {block:IndexPage}
-                        <div class="content">
-                        <div class="lines"> </div>  
+                                  </div>
+                            {/block:Chat}
                         
-                            <div class="photo">
-                                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-                            </div>
-
-                            {block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            {block:HasTags}
-                            <div class="tagBox">
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">PHOTO</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                    
-                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="highres"/></a>
                         
-                            {block:Caption}
-                                <p>{Caption}</p>
-                            {/block:Caption}
-                            
-                            {LinkOpenTag}{LinkURL}{LinkCloseTag}
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
+                            {block:Audio}
                         
-                    {/block:PermalinkPage}
-                    
-                    {/block:Photo}
-    
-                    {block:Photoset}
-                    
-                    {block:IndexPage}
-                    <div class="content">
-                    <div class="lines"> </div>  
-                            {Photoset-500}
-
-                            {block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            
-                            {block:HasTags}
-                            <div class="tagBox">
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">PHOTOSET</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                        {Photoset-500}
-                        
-                        {block:Caption}
-                            <p>{Caption}</p>
-                        {/block:Caption}
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                    {/block:PermalinkPage}
-        
-                    {/block:Photoset}
-                    
-
-                    {block:Quote}
-                    
-                    {block:IndexPage}
-                    <div class="content">
-                    <div class="lines"> </div>  
-                            <h2>"{Quote}"</h2>
-
-                            {block:Source}
-                                <div class="source">{Source}</div>
-                            {/block:Source}
-                            
-                            {block:HasTags}
-                            <div class="tagBox">
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">QUOTE</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-
-                    {block:PermalinkPage} 
-                        
-                        <h2>"{Quote}"</h2>
-
-                        {block:Source}
-                            <div class="source">{Source}</div>
-                        {/block:Source}
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                    {/block:PermalinkPage}
-                        
-                    {/block:Quote}
-                    
-                    
-                    
-                    {block:Link}
-                    {block:IndexPage}
-                    <div class="content">
-                    <div class="lines"> </div>  
-                            <h2 class="noEffect"><a href="{URL}" {Target}>{Name}</a></h2>
-
-                            {block:Description}
-                                <p>{Description}</p>
-                            {/block:Description}
-
-                            {block:HasTags}
-                            <div class="tagBox">
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">LINK</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                        
-                        <h2 class="noEffect"><a href="{URL}" {Target}>{Name}</a></h2>
-                        
-                        {block:Description}
-                            <p>{Description}</p>
-                        {/block:Description}
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                    {/block:PermalinkPage}
-                        
-                    {/block:Link}
-
-                    {block:Chat}
-                    
-                    {block:IndexPage}
-                        <div class="content">
-                        <div class="lines"> </div>
-                        
-                                {block:Title}
-                                    <h2><a href="{Permalink}">{Title}</a></h2>
-                                {/block:Title}
-
-                                <ul class="chat">
-                                    {block:Lines}
-                                        <li class="{Alt} user_{UserNumber}">
-                                            {block:Label}
-                                                <span class="label">{Label}</span>
-                                            {/block:Label}
-
-                                            {Line}
-                                        </li>
-                                    {/block:Lines}
-                                </ul>
-
-                            {block:HasTags}
-                            <div class="tagBox">
-                            <h3>TAGS:</h3>
-                            <ul class="tags">
-                                {block:Tags}
-                                    <li class="noEffect">
-                                        <a href="{TagURL}">{Tag}</a> /
-                                    </li>
-                                {/block:Tags}
-                            </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">CHAT</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                        
-                        {block:Title}
-                            <h2><a href="{Permalink}">{Title}</a></h2>
-                        {/block:Title}
-
-                        <ul class="chat">
-                            {block:Lines}
-                                <li class="{Alt} user_{UserNumber}">
-                                    {block:Label}
-                                        <span class="label">{Label}</span>
-                                    {/block:Label}
-
-                                    {Line}
-                                </li>
-                            {/block:Lines}
-                        </ul>
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                    {/block:PermalinkPage}
-                        
-                    {/block:Chat}
-
-                    {block:Video}
-                    
-                    {block:IndexPage}
-                        <div class="content">
-                        <div class="lines"> </div>  
-
-                                {Video-500}
-
-                                {block:Caption}
-                                    <div class="caption">{Caption}</div>
-                                {/block:Caption}
-
-                            {block:HasTags}
-                            <div class="tagBox">
-                            <h3>TAGS:</h3>
-                            <ul class="tags">
-                                {block:Tags}
-                                    <li class="noEffect">
-                                        <a href="{TagURL}">{Tag}</a> /
-                                    </li>
-                                {/block:Tags}
-                            </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">VIDEO</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {/block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                        
-                        {Video-500}
-                        
-                        {block:Caption}
-                            <p>{Caption}</p>
-                        {/block:Caption}
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                    {/block:PermalinkPage}
-                    
-                    {/block:Video}
-
-                    {block:Audio}
-                    
-                    {block:IndexPage}
-                        <div class="content">
-                        <div class="lines"> </div>  
-                                
                                 <div class="audio">
-                                    {AudioPlayerBlack}
-                                </div>
-                                {block:Caption}
-                                    <div class="caption">{Caption}</div>
-                                {/block:Caption}
-
-                            {block:HasTags}
-                            <div class="tagBox">
-                            <h3>TAGS:</h3>
-                            <ul class="tags">
-                                {block:Tags}
-                                    <li class="noEffect">
-                                        <a href="{TagURL}">{Tag}</a> /
-                                    </li>
-                                {/block:Tags}
-                            </ul>
-                            </div>
-                            {/block:HasTags}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">AUDIO</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {block:IndexPage}
-                    
-                    {block:PermalinkPage} 
-                        
-                        <div class="audio">
-                            {AudioPlayerBlack}
-                        </div>
-                        
-                        {block:Caption}
-                            <p>{Caption}</p>
-                        {/block:Caption}
-                    
-                        <div class="postDesc">
-                            
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            {block:HasTags}
-                                <h3>TAGS:</h3>
-                                <ul class="tags">
-                                    {block:Tags}
-                                        <li class="noEffect">
-                                            <a href="{TagURL}">{Tag}</a> /
-                                        </li>
-                                    {/block:Tags}
-                                </ul>
-                            {/block:HasTags}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
-                            </div>
-                        </div>
-                        
-                        
-                    {/block:PermalinkPage}
-                        
-                    {/block:Audio}
-
-                    {block:Answer}
-                    
-                    {block:IndexPage}
-                        <div class="content">
-                            <div class="lines"> </div>  
                                 
-                            {Asker} asked: <h2>{Question}</h2>
-                            {Answer}
-                            
-                            {block:AskEnabled}<a href="/ask">ASK</a>{/block:AskEnabled}
-                        </div>
-                        <div class="info">
-                            <hr class="infoBar" />
-                            <a href="{Permalink}">ANSWER</a><br />
-                            {ShortMonth}&nbsp;{DayOfMonth}<br />
-                            {12Hour}:{Minutes}&nbsp;{AmPm}<br />
-                            {block:NoteCount} <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
-                        </div>
-                    {block:IndexPage}
-                    
-                    {block:PermalinkPage} 
+                                {block:IfShowAlbumArtOnAudioPosts}
+                                    {block:AlbumArt}
+                                        <div class="album_art">
+                                            <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" style="margin-bottom:10px;" />
+                                        </div>
+                                    {/block:AlbumArt}
+                                {/block:IfShowAlbumArtOnAudioPosts}
+                                {AudioPlayerGrey}
+                                  {block:Caption}{Caption}{/block:Caption}
+                                  
+                                  {PlayCountWithLabel}
+                              
+                                {block:Date}
+                                  <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                  </div>
+                                {/block:Date}
+                                </div>
+                            {/block:Audio}
                         
-                            {Asker} asked: <h2>{Question}</h2>
-                            {Answer}
+                            {block:Video}
+                                <div class="video">
+                                    {Video-500}
+                                    {block:Caption}{Caption}{/block:Caption}
+                                {block:Date}
+                                  <div class="info"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonth}/{ShortYear}</a>
+                                  </div>
+                                {/block:Date}
+                                </div>
+                            {/block:Video}
+                        
                             
-                            {block:AskEnabled}<a href="/ask">ASK</a>{/block:AskEnabled}
+                        
+                        
+        
+                            {block:PostNotes}
+                                <div class="notecontainer">{PostNotes}</div>
+                                <div class="clearfix"></div>
+                            {/block:PostNotes}
+                        
+                                <div class="footer">
+                                {block:NoteCount}
+                                  <p>
+                                  <a href="{Permalink}">{NoteCountWithLabel}</a>
+                                  </p>
+                                {/block:NoteCount}
+                                    {block:IfShowTags}
+                                        {block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">{Tag}</a><span class="tag-commas">&nbsp; </span>{/block:Tags}</div>{/block:HasTags}
+                                    {/block:IfShowTags}
+                                    
+                                    
 
-                    
-                        <div class="postDesc">
+                                    {block:ContentSource}
+                                        <a href="{SourceURL}" class="source_url">
+                                            {lang:Source}:
+                                            {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+                                            {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                                        </a>
+                                    {/block:ContentSource}
                             
-                            {block:Date}<p class="posted">Posted on: {ShortMonth} {DayOfMonth}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}</p>{/block:Date}
-                            
-                            <div class="notes">
-                                {block:PostNotes}{PostNotes}{/block:PostNotes}
                             </div>
                         </div>
-                        
-                    {/block:PermalinkPage}
-                        
-                    {/block:Answer} 
-                        
-                {/block:Posts}
+                      
+        {block:Permalink}
 
-        </div>
+        {block:IfDisqusShortname}
+            <div id="disqus_thread"></div>
+            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+        {/block:IfDisqusShortname}
         
+        {/block:Permalink}
+    
+    
+    {/block:Posts}
+                    
 
-        <div class="desc">
-                    {block:IfHeaderImage}<a href="/" class="fix"><img src="{image:Header}" class="header"/></a>{/block:IfHeaderImage}
-                    {block:IfNotHeaderImage}<h1 class="noEffect"><a href="/">{Title}</a></h1>{/block:IfNotHeaderImage}
-                
-                <div class="descP">
-                    {block:Description}
-                        <p>{Description}</p>
-                    {/block:Description}
-                <ul class="noEffect">
-                    {block:AskEnabled}
-                        <li><a href="/ask"><span style="text-transform:uppercase;">{AskLabel}</span></a></li>
-                    {/block:AskEnabled}
-                    <li><a href="/archive">ARCHIVE</a></li>
-                    <li><a href="{RSS}">RSS</a></li>
-                </ul>
-                
-                <form action="/search" method="get">
-                    <input type="text" name="q" value="{SearchQuery}" class="search" />
-                    <input type="submit" value=">" class="submit" />
-                </form>
 
+    {block:IfDisqusShortname}
+        <script type="text/javascript">
+        //<![CDATA[
+        (function() {
+            var links = document.getElementsByTagName('a');
+            var query = '?';
+            for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+            }
+            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+        //]]>
+        </script>
+        {/block:IfDisqusShortname}
+
+
+<div style="clear: left"></div>
+<p class="byline">Website design was originally made by <a href="http://handsomecode.tumblr.com">Handsome Code</a></p>
+
+                 {block:Pagination}
+                      <div id="footer">
+                          {block:PreviousPage} <a href="{PreviousPage}" class="previous">&larr;Previous</a>  {/block:PreviousPage}
+                          {block:NextPage} <a href="{NextPage}" class="next">Next&rarr;</a> {/block:NextPage}
+                      </div>                      
+                    {/block:Pagination}
+                      
+                    {block:PermalinkPagination}
+                      <div id="footer">
+                        {block:PreviousPost} 
+                          <a href="{PreviousPost}" class="previous">&larr;Previous</a>  
+                        {/block:PreviousPost}
+                      
+                        {block:NextPost} 
+                          <a href="{NextPost}" class="next">Next&rarr;</a>  
+                        {/block:NextPost}
+                      </div>
+                    {/block:PermalinkPagination}
+       
+                    
+                    {block:DayPagination}
+                      <div id="footer">
+                           {block:PreviousDayPage}
+                               <a href="{PreviousDayPage}">
+                                   &#171; {ShortMonth} {DayOfMonth}
+                               </a>
+                           {/block:PreviousDayPage}
+
+                           {block:NextDayPage}
+                               <a href="{NextDayPage}">
+                                   {ShortMonth} {DayOfMonth} &#187;
+                               </a>
+                           {/block:NextDayPage}
+                      </div>
+                    {/block:DayPagination}
+
+            </div>
+       </div>
+
+        <div class="right_wrap">
+            <div class="right_col">
+                
+                <div class="description">
+                  {block:Description}
+                      {Description}
+                  {/block:Description}                
                 </div>
-        </div>
-        
-        <p class="footer">
-            {block:PreviousPage}
-                <a href="{PreviousPage}">&#171; Previous</a> /
-            {/block:PreviousPage}
+                
+                
+                    <div id="twitter">
+                 
+                                
+                                {block:Twitter}
+                                <div id="twitterwrapper">
+                                    <div id="tweetcontainer"></div>
+                                    <script type="text/javascript">
+                                        function recent_tweets(data) {
+                                            document.getElementById("twitterwrapper").style.display = "block";
+                                            for(i = 0; i < data.length; i++) {
+                                                document.getElementById("tweetcontainer").innerHTML = document.getElementById("tweetcontainer").innerHTML + '<a href="http://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '"><div class="content">' + data[i].text + '</div></a>';
+                                            }
+                                        }
+                                    </script>
+                                </div>
 
-            {block:NextPage}
-                <a href="{NextPage}">Next &#187;</a>
-            {/block:NextPage}
+                                
+         
 
-        </p>
-    </div>
+                        <div class="tweet_triangle"></div>
 
-    </body>
+                        <p><a href="http://twitter.com/{TwitterUsername}">twitter.com/{TwitterUsername}</a><p>
+                                {/block:Twitter}
+
+                    </div>
+
+               
+                {block:ifShowSearch}
+                  <div class="search">
+                      <form action="/search" method="get">
+                          <input type="text" name="q" value="" placeholder="Search">
+                          <button type="submit" style="display: none"></button>
+                      </form>
+                  </div>
+                {/block:ifShowSearch}
+                
+                {block:ifShowArchiveLink}
+                  <p>
+                      <a href="/archive">view archive</a>
+                  </p>
+                {/block:ifShowArchiveLink}
+                
+                
+                <br>
+                <br>
+                {block:HasPages}
+                
+                    {block:Pages}
+                        <h2>
+                            <a href="{URL}">{Label}</a>
+                        </h2>
+                    {/block:Pages}
+                
+                {/block:HasPages}
+                
+                {block:AskEnabled}
+                  <h2>
+                    <a href="/ask">{AskLabel}</a>
+                  </h2>
+                {/block:AskEnabled}
+                  
+                {block:SubmissionsEnabled}
+                  <h2>
+                    <a href="/submit">{SubmitLabel}</a>
+                  </h2>
+                {/block:SubmissionsEnabled}
+
+
+            </div>
+         </div>
+         
+      </div>
+   </div>       
+   
+    
+    {block:Twitter}
+        <script type="text/javascript" src="/tweets.js"></script>
+    {/block:Twitter}   
+
+    {block:IfGoogleAnalyticsID}
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    {/block:IfGoogleAnalyticsID}
+
+</body>
+
+
 </html>
+
