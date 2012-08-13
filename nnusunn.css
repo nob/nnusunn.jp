@@ -35,7 +35,7 @@
      
 
     .left_col {width: 630px; float: right; min-height: 100%; color:#000000;}
-    .right_col {width: 310px; margin-top: 140px; padding-left: 20px;}
+    .right_col {position: fixed; width: 310px; margin-top: 140px; padding-left: 20px;}
 
 
 
