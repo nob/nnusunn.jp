@@ -8,7 +8,7 @@
 
     .icon-font {
         font-family: WebIconFonts;
-        font-size: 27px;
+        font-size: 30px;
     } 
     html {min-height: 100%;}
     body {background-color:#3b3b3b; min-height: 100%}
@@ -81,12 +81,14 @@
     }
     #sidebar-links li{
         display: block;
-        width: 45px;
+        width: 55px;
         float: left;    
     }
     #sidebar-links a{
         text-decoration: none;
     
+        color: #979797;
+        color: #686868;
 }
     .clearfix {zoom:1;}
     .clearfix: after {

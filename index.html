@@ -298,11 +298,13 @@
                 <div id="portrait"><a href="/"><img src="{PortraitURL-96}" /></a></div> 
                 <ul id="sidebar-links" class="clearfix">
                 {block:ifShowArchiveLink}
-                  <li><a href="/archive" class="icon-font">;</a></li>
+                  <li><a href="/archive" class="icon-font" title="Archives">;</a></li>
                 {/block:ifShowArchiveLink}
-                  <li><a href="/rss" class="icon-font">r</a></li>
-                  <li><a href="/" class="icon-font">t</a></li>
-                  <li><a href="/" class="icon-font">=</a></li>
+                  <li><a href="/rss" class="icon-font" title="RSS">r</a></li>
+                {block:AskEnabled}
+                  <li><a href="/ask" class="icon-font" title="{AskLabel}">=</a></li>
+                {/block:AskEnabled}
+                  <li><a href="https://twitter.com/nnusunn_jp" class="icon-font" title="Twitter">t</a></li>
                 </ul>
                <!-- 
                     <div id="twitter">
@@ -355,11 +357,6 @@
                 
                 {/block:HasPages}
                 
-                {block:AskEnabled}
-                  <h2>
-                    <a href="/ask">{AskLabel}</a>
-                  </h2>
-                {/block:AskEnabled}
                   
                 {block:SubmissionsEnabled}
                   <h2>
