@@ -11,7 +11,7 @@
     .wrap1 {
         float:left;
         width:100%;
-        background-color: #f5e399;
+        background-color: #ded3bb;
         background-image: url('http://exp.nnusunn.jp/blog/bg.jpg');
         min-height: 100%;
         position: relative;
@@ -41,7 +41,7 @@
 
     /* Right Column */
 
-    .right_col a {font-weight: bold; color: #f5e399;}
+    .right_col a {font-weight: bold; color: #ded3bb;}
     .right_col p {margin-left: 10px;}
 
     .right_col .description {font-size: 23px; font-weight: bold; font-family: Helvetica, Arial; margin-bottom: 30px;}
@@ -59,10 +59,10 @@
     #portrait {
         padding-left: 20px;
     }
-    .search input {width: 200px; height: 28px; padding: 5px 5px 5px 50px; font-size: 14px;  border: none;
+    .search input {color: #ded3bb;width: 200px; height: 28px; padding: 5px 5px 5px 50px; font-size: 14px;  border: none;
                    -webkit-border-radius: 24px;
                     -moz-border-radius: 24px;
-                    border-radius: 24px; background: url('http://exp.nnusunn.jp/blog/search.png') no-repeat 10px; background-color: #f5e399; }
+                    border-radius: 24px; background: url('http://exp.nnusunn.jp/blog/search.png') no-repeat 10px; background-color: #000000; }
 
 
 
@@ -196,8 +196,8 @@
     #footer .previous {float: left; padding-left: 95px; padding-top: 32px; padding-bottom: 31px; padding-right: 48px;}
     #footer .next {float: right; padding-right: 120px; padding-top: 32px; padding-bottom: 31px; padding-left: 48px;}
     #footer .previous:hover , #footer .next:hover {background-color:#3b3b3b;}
-    #footer a:hover, #footer a {text-decoration: none; color:#f5e399;}
-    
+    #footer a:hover, #footer a {text-decoration: none; color:#ded3bb;}
+   
     .byline {font-size: 11px; display: block; width: 500px; text-align: center; float: left; margin-top: 40px;}
 
 
