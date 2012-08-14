@@ -8,6 +8,7 @@
 
     .icon-font {
         font-family: WebIconFonts;
+        font-size: 25px;
     } 
     html {min-height: 100%;}
     body {background-color:#3b3b3b; min-height: 100%}
