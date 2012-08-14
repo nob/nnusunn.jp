@@ -35,7 +35,7 @@
      
 
     .left_col {width: 630px; float: right; min-height: 100%; color:#000000;}
-    .right_col {position: fixed; width: 310px; margin-top: 140px; padding-left: 20px;}
+    .right_col {position: fixed; width: 310px; margin-top: 180px; padding-left: 20px;}
 
 
 
@@ -59,10 +59,10 @@
     #portrait {
         padding-left: 20px;
     }
-    .search input {width:255px; height: 44px; padding: 5px 5px 5px 50px; font-size: 16px;  border: none;
+    .search input {width: 200px; height: 28px; padding: 5px 5px 5px 50px; font-size: 14px;  border: none;
                    -webkit-border-radius: 24px;
                     -moz-border-radius: 24px;
-                    border-radius: 24px; background: url('http://26.media.tumblr.com/tumblr_lhq8q0SO0h1qztnxqo1_100.png') no-repeat 10px; background-color: #f5e399; }
+                    border-radius: 24px; background: url('http://exp.nnusunn.jp/blog/search.png') no-repeat 10px; background-color: #f5e399; }
 
 
 
