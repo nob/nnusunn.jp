@@ -8,7 +8,7 @@
 
     .icon-font {
         font-family: WebIconFonts;
-        font-size: 25px;
+        font-size: 27px;
     } 
     html {min-height: 100%;}
     body {background-color:#3b3b3b; min-height: 100%}
@@ -76,14 +76,18 @@
                     -moz-border-radius: 24px;
                     border-radius: 24px; background: url('http://exp.nnusunn.jp/blog/search.png') no-repeat 10px; background-color: #000000; }
     #sidebar-links {
+        margin: 28px 20px;
         list-style: none;    
     }
     #sidebar-links li{
+        display: block;
+        width: 45px;
         float: left;    
     }
     #sidebar-links a{
         text-decoration: none;
-    }
+    
+}
     .clearfix {zoom:1;}
     .clearfix: after {
         content: "";
