@@ -78,8 +78,17 @@
     #sidebar-links {
         list-style: none;    
     }
+    #sidebar-links li{
+        float: left;    
+    }
     #sidebar-links a{
         text-decoration: none;
+    }
+    .clearfix {zoom:1;}
+    .clearfix: after {
+        content: "";
+        display: block;
+        clear: both;
     }
 
 
