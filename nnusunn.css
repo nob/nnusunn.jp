@@ -1,3 +1,14 @@
+   @font-face{ 
+        font-family: 'WebIconFonts';
+        src: url('http://exp.nnusunn.jp/blog/WebIconFonts/webiconfonts.eot');
+        src: url('http://exp.nnusunn.jp/blog/WebIconFonts/WebIconFonts.eot?') format('eot'),
+             url('http://exp.nnusunn.jp/blog/WebIconFonts/WebIconFonts.woff') format('woff'),
+             url('http://exp.nnusunn.jp/blog/WebIconFonts/WebIconFonts.ttf') format('truetype');
+    }
+
+    .icon-font {
+        font-family: WebIconFonts;
+    } 
     html {min-height: 100%;}
     body {background-color:#3b3b3b; min-height: 100%}
 
