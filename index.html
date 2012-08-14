@@ -296,14 +296,14 @@
                   {/block:Description}                
                 </div>
                 <div id="portrait"><a href="/"><img src="{PortraitURL-96}" /></a></div> 
-                  <ul id="sidebarlinks">
-                    {block:ifShowArchiveLink}
-                      <li><a href="/archive" class="icon-font">;</a><li>
-                    {/block:ifShowArchiveLink}
-                      <li><a href="/rss" class="icon-font">r</a><li>
-                      <li><a href="/" class="icon-font">t</a><li>
-                      <li><a href="/" class="icon-font">=</a><li>
-                  </ul>
+                <ul id="sidebar-links">
+                {block:ifShowArchiveLink}
+                  <li><a href="/archive" class="icon-font">;</a></li>
+                {/block:ifShowArchiveLink}
+                  <li><a href="/rss" class="icon-font">r</a></li>
+                  <li><a href="/" class="icon-font">t</a></li>
+                  <li><a href="/" class="icon-font">=</a></li>
+                </ul>
                <!-- 
                     <div id="twitter">
                  
