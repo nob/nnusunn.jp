@@ -29,6 +29,14 @@
         position: relative;
         right: 33%;
     }
+    div#baloon {
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        background-image: url('http://exp.nnusunn.jp/blog/arrow.png');
+        bottom: 46%;
+        right: 432px;
+    }
 
     .left_wrap {
       float:left;
