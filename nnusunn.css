@@ -91,9 +91,10 @@
     
         color: #979797;
         color: #686868;
+    
     }
     #sidebar-links a:hover{
-        text-shadow: #000000 0px 10px 20px;
+        text-shadow: #387c51 0px 10px 20px;
     }
     .clearfix {zoom:1;}
     .clearfix: after {
