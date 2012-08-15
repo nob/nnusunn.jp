@@ -112,6 +112,7 @@
     .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px;}
 
     .post {width: 595px; position: relative;}
+    .post p {font-size: 15px;}
 
     .info{position: absolute; left: 520px; top: 0; width: 50px; color: #7c7c7c; text-align: center;}
     .info a { font-family: Cherry cream soda; color: #000000 !important; font-weight: bold; text-decoration: none;}
