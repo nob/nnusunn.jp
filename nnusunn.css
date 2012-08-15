@@ -11,7 +11,7 @@
         font-size: 30px;
     } 
     html {min-height: 100%;}
-    body {background-color:#3b3b3b; min-height: 100%}
+    body {background-color: #484848; min-height: 100%}
 
     /* Structure */
 
@@ -100,10 +100,10 @@
 
     /* Left Column */
 
-    .accent {width: 500px; height: 10px; background-color: #68aa81;}
+    .accent {width: 500px; height: 20px; margin-bottom: 30px;background-color: #387C51;}
 
-    .title h1 {font-size: 60px;}
-    .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px}
+    .title h1 {font-size: 60px;color: #387C51;}
+    .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px;}
 
     .post {width: 595px; position: relative;}
 
@@ -198,7 +198,7 @@
 
     body{color:#000000;}
     h1,h2{font-size:14px;display:inline;margin:0 5px 0 0;}
-    h1 a:link,h1 a:visited,h1 a:active{color:#000000; text-decoration: none; line-height: 60px; letter-spacing: -2px}
+    h1 a:link,h1 a:visited,h1 a:active{color: #112618; text-decoration: none; line-height: 60px; letter-spacing: -2px}
     a:link {text-decoration: none;}
     a:hover {text-decoration: underline;}
 
@@ -223,7 +223,7 @@
     
     /* Footer  */
     
-    #footer {width: 500px; background-color: #68aa81; font-size: 22px; font-weight: bold; height: 90px; display: block; float: left; margin-top: 10px;}
+    #footer {width: 500px; background-color: #387C51; font-size: 22px; font-weight: bold; height: 90px; display: block; float: left; margin-top: 10px;}
     
     #footer .previous {float: left; padding-left: 95px; padding-top: 32px; padding-bottom: 31px; padding-right: 48px;}
     #footer .next {float: right; padding-right: 120px; padding-top: 32px; padding-bottom: 31px; padding-left: 48px;}
