@@ -11,7 +11,7 @@
         font-size: 30px;
     } 
     html {min-height: 100%;}
-    body {background-color: #484848; min-height: 100%}
+    body {background-color: #353535; min-height: 100%}
 
     /* Structure */
 
@@ -47,7 +47,7 @@
      
 
     .left_col {width: 630px; float: right; min-height: 100%; color:#000000;}
-    .right_col {position: fixed; width: 310px; margin-top: 180px; padding-left: 20px;}
+    .right_col {position: fixed; width: 310px; margin-top: 160px; padding-left: 20px;}
 
 
 
@@ -70,7 +70,9 @@
                     border-top: 12px solid #68aa81;}
     #portrait {
         padding-left: 20px;
-    }
+    
+        margin-top: 180px;
+}
     .search input {color: #ded3bb;width: 200px; height: 28px; padding: 5px 5px 5px 50px; font-size: 14px;  border: none;
                    -webkit-border-radius: 24px;
                     -moz-border-radius: 24px;
@@ -102,7 +104,7 @@
 
     .accent {width: 500px; height: 20px; margin-bottom: 30px;background-color: #387C51;}
 
-    .title h1 {font-size: 60px;color: #387C51;}
+    .title h1 {font-ster';font-family: 'Plasize: 60px;color: #387C51;}
     .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px;}
 
     .post {width: 595px; position: relative;}
@@ -198,7 +200,7 @@
 
     body{color:#000000;}
     h1,h2{font-size:14px;display:inline;margin:0 5px 0 0;}
-    h1 a:link,h1 a:visited,h1 a:active{color: #112618; text-decoration: none; line-height: 60px; letter-spacing: -2px}
+    h1 a:link,h1 a:visited,h1 a:active{color: #000000; text-decoration: none; line-height: 60px; letter-spacing: -2px}
     a:link {text-decoration: none;}
     a:hover {text-decoration: underline;}
 
