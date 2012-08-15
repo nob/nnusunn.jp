@@ -114,6 +114,8 @@
     .post {width: 595px; position: relative;}
 
     .info{position: absolute; left: 520px; top: 0; color: #7c7c7c; }
+    .info a { font-family: Slackey; color: #000000; font-size: 20px; text-decoration: none;}
+    .info a:hover { color: #38c51; font-size: 25px; text-decoration: none;}
     .notecontainer{margin-top: 20px;}
 
 
@@ -215,7 +217,7 @@
     #nav{font-size:14px;font-weight:bold;}
     #desc{background:#eee;padding:10px;margin-top:10px;font-size:11px;width:100%;}
 
-    .post{margin:0 0 20px 0;border-bottom:#3b3b3b 1px solid; padding:0 0 20px 0;}
+    .post{margin:0 0 20px 0;border-bottom: #387C51 3px solid; padding:0 0 20px 0;}
     .quote blockquote{margin:0 0 0 10px;}
     blockquote{margin-left: 10px;}
     .quote cite{display:block;text-align:right;margin:10px 0 0 0;font-weight:bold;}
