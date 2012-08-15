@@ -91,7 +91,10 @@
     
         color: #979797;
         color: #686868;
-}
+    }
+    #sidebar-links a:hover{
+        text-shadow: #000000 0px 10px 20px;
+    }
     .clearfix {zoom:1;}
     .clearfix: after {
         content: "";
@@ -104,7 +107,7 @@
 
     .accent {width: 500px; height: 20px; margin-bottom: 30px;background-color: #387C51;}
 
-    .title h1 {font-family: 'Plasize' font-size:55px; color: #000000;}
+    .title h1 {font-family: 'Plasize' font-size:52px; color: #000000;}
     .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px;}
 
     .post {width: 595px; position: relative;}
