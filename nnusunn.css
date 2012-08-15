@@ -32,10 +32,10 @@
     div#baloon {
         width: 35px;
         height: 35px;
-        position: fixed;
+        position: absolute;
         background-image: url('http://exp.nnusunn.jp/blog/arrow.png');
-        bottom: 46%;
-        right: 432px;
+        left: -8px;
+        bottom: 98px;
     }
 
     .left_wrap {
