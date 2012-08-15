@@ -94,7 +94,7 @@
     
     }
     #sidebar-links a:hover{
-        text-shadow: #275738 0px 10px 10px;
+        text-shadow: #275738 0px 10px 5px;
     }
     .clearfix {zoom:1;}
     .clearfix: after {
