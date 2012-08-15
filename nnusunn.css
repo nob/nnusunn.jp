@@ -114,8 +114,10 @@
     .post {width: 595px; position: relative;}
 
     .info{position: absolute; left: 520px; top: 0; width: 55px; color: #7c7c7c; }
-    .info a { font-family: Slackey; color: #000000 !important; font-size: 20px; text-decoration: none;}
-    .info a:hover { color: #387C51 !important; font-size: 22px; text-decoration: none;}
+    .info a { font-family: Cherry cream soda; color: #000000 !important; font-weight: bold; text-decoration: none;}
+    .info a:hover { text-shadow: #387C51 2px 2px 6px; text-decoration: none;}
+    .info span.day { font-size: 28px;}
+    .info span.month { font-size: 20px;}
     .notecontainer{margin-top: 20px;}
 
 
@@ -234,10 +236,10 @@
     
     /* Footer  */
     
-    #footer {width: 500px; background-color: #387C51; font-size: 22px; font-weight: bold; height: 90px; display: block; float: left; margin-top: 10px;}
+    #footer {width: 500px; background-color: #387C51; font-size: 18px; font-weight: bold; height: 55px; display: block; float: left; margin-top: 10px;font-family: 'Cherry Cream Soda';}
     
-    #footer .previous {float: left; padding-left: 95px; padding-top: 32px; padding-bottom: 31px; padding-right: 48px;}
-    #footer .next {float: right; padding-right: 120px; padding-top: 32px; padding-bottom: 31px; padding-left: 48px;}
+    #footer .previous {float: left; padding-left: 95px; padding-top: 15px; padding-bottom: 10px; padding-right: 48px;}
+    #footer .next {float: right; padding-right: 120px; padding-top: 15px; padding-bottom: 10px; padding-left: 48px;}
     #footer .previous:hover , #footer .next:hover {background-color:#3b3b3b;}
     #footer a:hover, #footer a {text-decoration: none; color:#ded3bb;}
    
