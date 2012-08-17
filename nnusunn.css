@@ -128,10 +128,11 @@
     .info span.day { font-size: 20px;}
     .info span.month { font-size: 17px;}
     .info .fav-icon {
-        margin-top: 9px;
+        margin-top: 30px;
         font-family: WebIconFonts;
-        font-size: 22px;
+        font-size: 24px;
         color: #000000;
+        display: none;
     }
     .notecontainer{margin-top: 20px;}
 
