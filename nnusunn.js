@@ -3,7 +3,7 @@ $(document).ready(function(){
         $(this).find('.tags a').each(function(i){
             tag = $(this).text();
             if(tag === 'fav' || tag === 'favs') {
-                $(this).parentsUntil('.post').find('.fav-icon').show();        
+                $(this).parentsUntil('.post').prev().find('.fav-icon').show();        
                 return false;
             }
         });
