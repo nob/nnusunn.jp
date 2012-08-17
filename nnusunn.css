@@ -127,6 +127,12 @@
     .info a:hover { text-shadow: #387C51 2px 2px 6px; text-decoration: none;}
     .info span.day { font-size: 20px;}
     .info span.month { font-size: 17px;}
+    .info .fav-icon {
+        margin-top: 9px;
+        font-family: WebIconFonts;
+        font-size: 22px;
+        color: #000000;
+    }
     .notecontainer{margin-top: 20px;}
 
 
