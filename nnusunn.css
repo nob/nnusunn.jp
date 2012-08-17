@@ -133,6 +133,7 @@
     .date {margin-bottom: 10px;}
     
     .post .go {font-size: 20px;}
+    .post .tags {display: none;}
     
     .footer {padding-top: 10px;}
     .footer p {margin: 5px 0;}
