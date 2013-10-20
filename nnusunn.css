@@ -30,12 +30,14 @@
         right: 33%;
     }
     div#baloon {
-        width: 35px;
-        height: 35px;
         position: absolute;
-        background-image: url('http://exp.jointanet.com/blog/arrow.png');
-        left: -8px;
-        bottom: 98px;
+        left: 0px;
+        bottom: 115px;
+        width: 0;
+        height: 0;
+        border-top: 17px solid rgba(0, 0, 0, 0);
+        border-bottom: 17px solid rgba(0, 0, 0, 0);
+        border-left: 36px solid #DED3BB;
     }
 
     .left_wrap {
