@@ -8,12 +8,12 @@
     <meta name="color:Background" content="#ffffff" />
     <meta name="color:Text" content="#000000" />
     <meta name="color:Link" content="#666666" />
-    
+
     <meta name="color:Sidebar" content="#e4e4e4" />
     <meta name="color:SidebarLinks" content="#000000" />
     <meta name="color:Search" content="#f8f8f8" />
-    
-    
+
+
     <meta name="if:Show Search" content="1" />
     <meta name="if:Show Archive Link" content="1" />
     <meta name="if:Show Tags" content="1" />
@@ -21,36 +21,36 @@
     <meta name="text:Google Analytics ID" content=""/>
     <meta name="text:Disqus Shortname" content=""/>
 
- 
+
     <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
     <!--<link href='http://fonts.googleapis.com/css?family=Plaster' rel='stylesheet' type='text/css'>-->
     <!--<link href='http://fonts.googleapis.com/css?family=Ruslan+Display' rel='stylesheet' type='text/css'>-->
     <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <link rel="shortcut icon" href="{Favicon}">
-    
+
     <title>{block:SearchPage}Search results for "{SearchQuery}" - {/block:SearchPage}   {block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
     {block:Description}
          <meta name="description" content="{MetaDescription}" />
      {/block:Description}
-    
+
     <script type="text/javascript" src="/tweets.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
-    <script type="text/javascript" src="http://exp.nnusunn.jp/blog/nnusunn.js"></script>
-    <link rel="stylesheet" href="http://exp.nnusunn.jp/blog/nnusunn.css" media="screen"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://exp.jointanet.com/blog/nnusunn.js"></script>
+    <link rel="stylesheet" href="http://exp.jointanet.com/blog/nnusunn.css" media="screen"/>
     <style type="text/css">
     {CustomCSS}
     </style>
- 
+
 
 <body>
     <div class="wrap2">
         <div class="wrap1">
             <div class="left_wrap">
                 <div class="left_col">
-                    
+
                     <div class="accent"></div>
-                    
+
                    {block:SearchPage}
                         {block:SearchResults}
                             <div id="searchresults">
@@ -60,26 +60,26 @@
 
                         {block:NoSearchResults}
                               <div id="searchresults">
-                        
-                                {lang:No search results for SearchQuery 2}                                
+
+                                {lang:No search results for SearchQuery 2}
                               </div>
                         {/block:NoSearchResults}
                     {/block:SearchPage}
-                    
+
                    {block:TagPage}
                       <div id="tagresults">
                         Posts tagged "{Tag}"
                       </div>
                     {/block:TagPage}
-                    
-                  {block:DayPage} 
+
+                  {block:DayPage}
                      <div id="tagresults">
                         {Month} {DayOfMonth}, {Year}
                     </div>
                   {/block:DayPage}
-                    
-                    
-                    
+
+
+
                     {block:Posts}
                         <div class="post">
                             {block:Text}
@@ -93,9 +93,9 @@
                                     {/block:Date}
                                 </div>
                             {/block:Text}
-        
+
                             {block:Photo}
-                                <div class="photo">     
+                                <div class="photo">
                                   {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-500}"/>{LinkCloseTag}
                                   {block:Caption}{Caption}{/block:Caption}
                                   {block:Date}
@@ -105,9 +105,9 @@
                                   {/block:Date}
                                 </div>
                             {/block:Photo}
-        
+
                             {block:Quote}
-                                <div class="quote"> 
+                                <div class="quote">
                                   <big class="quote">&#147;</big>
                                   <blockquote>{Quote}</blockquote>
                                   {block:Source}<cite>{Source}</cite>{/block:Source}
@@ -118,23 +118,23 @@
                                   {/block:Date}
                                 </div>
                             {/block:Quote}
-                        
+
                             {block:Link}
-                                  <div class="link"> 
+                                  <div class="link">
                                       <a class="go" href="{URL}">{Name}</a>
                                       {block:Description}{Description}{/block:Description}
-                                  
+
                                       {block:Date}
                                         <div class="info"><a href="{Permalink}"><span class="day">{DayOfMonthWithZero}</span><br><span class="month">{ShortMonth}</span></a>
                                             <p class="fav-icon">0<p>
                                         </div>
                                     {/block:Date}
-                                
+
                                   </div>
                             {/block:Link}
-                        
+
                            {block:Chat}
-                                  <div class="chat"> 
+                                  <div class="chat">
                                       {block:Title}<h3>{Title}</h3>{/block:Title}
                                         <ul class="conv">
                                           {block:Lines}<li class="{Alt}">{block:Label}<strong>{Label}</strong> {/block:Label}{Line}</li>{/block:Lines}
@@ -148,12 +148,12 @@
 
                                   </div>
                             {/block:Chat}
-                        
-                        
+
+
                             {block:Audio}
-                        
+
                                 <div class="audio">
-                                
+
                                 {block:IfShowAlbumArtOnAudioPosts}
                                     {block:AlbumArt}
                                         <div class="album_art">
@@ -163,9 +163,9 @@
                                 {/block:IfShowAlbumArtOnAudioPosts}
                                 {AudioPlayerGrey}
                                   {block:Caption}{Caption}{/block:Caption}
-                                  
+
                                   {PlayCountWithLabel}
-                              
+
                                 {block:Date}
                                   <div class="info"><a href="{Permalink}"><span class="day">{DayOfMonthWithZero}</span><br><span class="month">{ShortMonth}</span></a>
                                             <p class="fav-icon">0<p>
@@ -173,7 +173,7 @@
                                 {/block:Date}
                                 </div>
                             {/block:Audio}
-                        
+
                             {block:Video}
                                 <div class="video">
                                     {Video-500}
@@ -185,16 +185,16 @@
                                 {/block:Date}
                                 </div>
                             {/block:Video}
-                        
-                            
-                        
-                        
-        
+
+
+
+
+
                             {block:PostNotes}
                                 <div class="notecontainer">{PostNotes}</div>
                                 <div class="clearfix"></div>
                             {/block:PostNotes}
-                        
+
                                 <div class="footer">
                                 {block:NoteCount}
                                   <p>
@@ -204,8 +204,8 @@
                                     {block:IfShowTags}
                                         {block:HasTags}<div class="tags">{block:Tags}<a href="{TagURL}">{Tag}</a><span class="tag-commas">&nbsp; </span>{/block:Tags}</div>{/block:HasTags}
                                     {/block:IfShowTags}
-                                    
-                                    
+
+
 
                                     {block:ContentSource}
                                         <a href="{SourceURL}" class="source_url">
@@ -214,10 +214,10 @@
                                             {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
                                         </a>
                                     {/block:ContentSource}
-                            
+
                             </div>
                         </div>
-                      
+
         {block:Permalink}
 
         {block:IfDisqusShortname}
@@ -225,12 +225,12 @@
             <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
             <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
         {/block:IfDisqusShortname}
-        
+
         {/block:Permalink}
-    
-    
+
+
     {/block:Posts}
-                    
+
 
 
     {block:IfDisqusShortname}
@@ -255,24 +255,24 @@
 
                  {block:Pagination}
                       <div id="footer">
-                          {block:PreviousPage} <a href="{PreviousPage}" class="previous">&larr;Previous</a>  {/block:PreviousPage}
-                          {block:NextPage} <a href="{NextPage}" class="next">Next&rarr;</a> {/block:NextPage}
-                      </div>                      
+                          {block:PreviousPage} <a href="{PreviousPage}" class="previous">&larr;&nbsp;&nbsp;New</a>  {/block:PreviousPage}
+                          {block:NextPage} <a href="{NextPage}" class="next">Old&nbsp;&nbsp;&rarr;</a> {/block:NextPage}
+                      </div>
                     {/block:Pagination}
-                      
+
                     {block:PermalinkPagination}
                       <div id="footer">
-                        {block:PreviousPost} 
-                          <a href="{PreviousPost}" class="previous">&larr;Previous</a>  
+                        {block:PreviousPost}
+                          <a href="{PreviousPost}" class="previous">&larr;&nbsp;&nbsp;New</a>
                         {/block:PreviousPost}
-                      
-                        {block:NextPost} 
-                          <a href="{NextPost}" class="next">Next&rarr;</a>  
+
+                        {block:NextPost}
+                          <a href="{NextPost}" class="next">Old&nbsp;&nbsp;&rarr;</a>
                         {/block:NextPost}
                       </div>
                     {/block:PermalinkPagination}
-       
-                    
+
+
                     {block:DayPagination}
                       <div id="footer">
                            {block:PreviousDayPage}
@@ -296,17 +296,17 @@
             <div class="right_col">
                     <div class="title">
                         <h1><a href="/">{Title}</a></h1>
-                    </div>        
-                
+                    </div>
+
                 <div class="description">
                   {block:Description}
                       {Description}
-                  {/block:Description}                
+                  {/block:Description}
                 </div>
                 <div id="portrait">
                     <a href="/"><img src="{PortraitURL-96}" /></a>
                     <div id="baloon"></div>
-                </div> 
+                </div>
                 <ul id="sidebar-links" class="clearfix">
                 {block:ifShowArchiveLink}
                   <li><a href="/archive" class="icon-font" title="Archives">;</a></li>
@@ -317,10 +317,10 @@
                 {/block:AskEnabled}
                   <li><a href="https://twitter.com/nnusunn_jp" class="icon-font" title="Twitter" target="_blank">t</a></li>
                 </ul>
-               <!-- 
+               <!--
                     <div id="twitter">
-                 
-                                
+
+
                                 {block:Twitter}
                                 <div id="twitterwrapper">
                                     <div id="tweetcontainer"></div>
@@ -334,8 +334,8 @@
                                     </script>
                                 </div>
 
-                                
-         
+
+
 
                         <div class="tweet_triangle"></div>
 
@@ -344,7 +344,7 @@
 
                     </div>
                 -->
-               
+
                 {block:ifShowSearch}
                   <div class="search">
                       <form action="/search" method="get">
@@ -353,22 +353,22 @@
                       </form>
                   </div>
                 {/block:ifShowSearch}
-                
-                
-                
+
+
+
                 <br>
                 <br>
                 {block:HasPages}
-                
+
                     {block:Pages}
                         <h2>
                             <a href="{URL}">{Label}</a>
                         </h2>
                     {/block:Pages}
-                
+
                 {/block:HasPages}
-                
-                  
+
+
                 {block:SubmissionsEnabled}
                   <h2>
                     <a href="/submit">{SubmitLabel}</a>
@@ -378,14 +378,14 @@
 
             </div>
          </div>
-         
+
       </div>
-   </div>       
-   
-    
+   </div>
+
+
     {block:Twitter}
         <script type="text/javascript" src="/tweets.js"></script>
-    {/block:Twitter}   
+    {/block:Twitter}
 
     {block:IfGoogleAnalyticsID}
     <script type="text/javascript">
