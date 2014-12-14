@@ -66,7 +66,12 @@
     .right_col a {font-weight: bold; color: #ded3bb;}
     .right_col p {margin-left: 10px;}
 
-    .right_col .description {font-size: 23px; font-weight: bold; font-family: Helvetica, Arial; margin-bottom: 30px;}
+    .right_col .description {
+        font-size: 18px;
+        font-weight: normal;
+        font-family: 'Cherry Cream Soda', Helvetica, Arial;
+        margin-bottom: 30px;
+    }
     .right_col h2 {font-size: 20px; clear: both; float: left; margin-bottom: 10px;}
     #twitter p {margin-left:10px; font-weight: bold; clear: both; margin-bottom: 40px;}
     #twitterwrapper {background-color: #68aa81; padding: 10px;}
@@ -104,7 +109,7 @@
 
     }
     #sidebar-links a:hover{
-        text-shadow: #275738 2px 2px 6px;
+        text-shadow: #72001E 2px 2px 6px;
     }
     .clearfix {zoom:1;}
     .clearfix: after {
@@ -116,7 +121,7 @@
 
     /* Left Column */
 
-    .accent {width: 500px; height: 20px; margin-bottom: 30px;background-color: #387C51;}
+    .accent {width: 500px; height: 20px; margin-bottom: 30px;background-color: #72001E;}
 
     .title h1 {font-size:52px; color: #000000;}
     .title {margin-bottom: 39px; margin-top: 35px; padding-right: 20px;}
@@ -126,7 +131,7 @@
 
     .info{position: absolute; left: 520px; top: 0; width: 50px; color: #7c7c7c; text-align: center;}
     .info a { font-family: Cherry cream soda; color: #000000 !important; font-weight: bold; text-decoration: none;}
-    .info a:hover { text-shadow: #387C51 2px 2px 6px; text-decoration: none;}
+    .info a:hover { text-shadow: #72001E 2px 2px 6px; text-decoration: none;}
     .info span.day { font-size: 20px;}
     .info span.month { font-size: 17px;}
     .info .fav-icon {
@@ -229,7 +234,7 @@
     h1,h2{display:inline;margin:0 5px 0 0;}
     h1 a:link,h1 a:visited,h1 a:active{color: #000000; text-decoration: none; line-height: 60px; letter-spacing: -2px;font-family: Slackey;font-size: 52px;}
     h1 a:hover{
-        text-shadow: #275738 2px 2px 6px;
+        text-shadow: #72001E 2px 2px 6px;
     }
     a:link {text-decoration: none;}
     a:hover {text-decoration: underline;}
@@ -238,7 +243,7 @@
     #nav{font-size:14px;font-weight:bold;}
     #desc{background:#eee;padding:10px;margin-top:10px;font-size:11px;width:100%;}
 
-    .post{margin:0 0 20px 0;border-bottom: #387C51 3px solid; padding:0 0 20px 0;}
+    .post{margin:0 0 20px 0;border-bottom: #72001E 3px solid; padding:0 0 20px 0;}
     .quote blockquote{margin:0 0 0 10px;}
     blockquote{margin-left: 10px;}
     .quote cite{display:block;text-align:right;margin:10px 0 0 0;font-weight:bold;}
@@ -255,7 +260,7 @@
 
     /* Footer  */
 
-    #footer {width: 500px; background-color: #387C51; font-size: 18px; font-weight: bold; height: 55px; display: block; float: left; margin-top: 10px;font-family: 'Cherry Cream Soda';}
+    #footer {width: 500px; background-color: #72001E; font-size: 18px; font-weight: bold; height: 55px; display: block; float: left; margin-top: 10px;font-family: 'Cherry Cream Soda';}
 
     #footer .previous {float: left; padding-left: 95px; padding-top: 15px; padding-bottom: 17px; padding-right: 48px;}
     #footer .next {float: right; padding-right: 120px; padding-top: 15px; padding-bottom: 17px; padding-left: 48px;}
